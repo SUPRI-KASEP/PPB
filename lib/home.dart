@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:new_project/profil_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -17,7 +18,7 @@ class HomePage extends StatelessWidget {
             const Icon(Icons.home, size: 100, color: Colors.blue),
             const SizedBox(height: 20),
             const Text(
-              'Selamat Datang di Halaman Home!',
+              'Selamat datang di Aplikasi Kami',
               style: TextStyle(fontSize: 20),
             ),
             const SizedBox(height: 40),
@@ -26,6 +27,16 @@ class HomePage extends StatelessWidget {
                 Navigator.pop(context); // Kembali ke halaman login
               },
               child: const Text('Logout'),
+            ),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const ProfilePage()),
+                );
+              },
+              child: const Text('Lihat Profil'),
             ),
           ],
         ),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'home.dart'; // Mengimpor halaman Home
+import 'home.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -14,11 +14,10 @@ class _LoginPageState extends State<LoginPage> {
     String email = _emailController.text;
     String password = _passwordController.text;
 
-    // Validasi login sederhana
     if (email.isNotEmpty && password.isNotEmpty) {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => const HomePage()), // Pindah ke halaman Home setelah login berhasil
+        MaterialPageRoute(builder: (context) => const HomePage()), 
       );
     } else {
       ScaffoldMessenger.of(context).showSnackBar(

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'login.dart'; // Mengimpor halaman login
+import 'login.dart';
 
 void main() {
   runApp(const MainApp());
@@ -13,7 +13,7 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       title: 'Login & Home',
       debugShowCheckedModeBanner: false,
-      home: LoginPage(), // Halaman pertama yang tampil adalah Login
+      home: LoginPage(),
     );
   }
 }
